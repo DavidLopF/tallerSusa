@@ -330,3 +330,15 @@ moneda1=input("Ingrese la moneda de origen: ")
 moneda2=input("Ingrese la moneda de destino: ")
 cantidad=float(input("Ingrese la cantidad: "))
 print("La cantidad en "+moneda2+" es: "+str(diccionario[moneda1]*cantidad/diccionario[moneda2]))
+
+#Crea una función que calcule la desviación estándar de una lista de números.
+def calcular_desviacion_estandar(lista):
+    promedio=sum(lista)/len(lista)
+    suma=0
+    for i in lista:
+        suma+=(i-promedio)**2
+    desviacionestandar=(suma/(len(lista)-1))**(1/2)
+    return desviacionestandar
+
+lista=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("La desviacion estandar de la lista es: "+str(calcular_desviacion_estandar(lista)))
